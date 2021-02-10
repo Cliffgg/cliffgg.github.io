@@ -8,48 +8,48 @@
     </head>
     <body>
      <header> 
-            <h1>Planets Data</h1>
+            <h1 title="Planet Data">Planets Data</h1>
      </header>   
         <main>
             <table>      
-            <!-- Add the table element. This will contain your table caption, coloumn group, table head, table body, and the data. -->
-                
-                <!-- The caption element should be the first child of the table element, and wrap the following text and link.-->
                 <caption>
                 Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).
                 </caption>
                     <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
+                        <col id="Planet groups">
+                        <col id="Planet group sub headings" style="border: 0px;">
+                        <col id="Name" style="border: 2px solid black;">
+                        <col id="Mass">
+                        <col id"Diameter">
+                        <col id="Density">
+                        <col id="Gravity">
+                        <col id="Length of day">
+                        <col id="Distance from sun">
+                        <col id="Mean Temperature">
+                        <col id="Number of moons">
+                        <col id="Notes">
+                        <col id="Image">
                     </colgroup>
                         <thead>
                             <tr>
                                 <th colspan="2"></th>
-                                <th>Name</th>
-                                <th>Mass<br>(10<sup>24</sup>kg)</th>
-                                <th>Diameter<br>(kg)</th>
-                                <th>Density<br>(kg/m<sup>3</sup>)</th>
-                                <th>Gravity<br>(m/s<sup>2</sup>)</th>
-                                <th>Length of day<br>(hours)</th>
-                                <th>Distance from sun<br>(10<sup>2</sup>km)</th>
-                                <th>Mean temperature<br>(c)</th>
-                                <th>Number of moons</th>
-                                <th>Notes</th>
-                                <th>Image</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Mass<br>(10<sup>24</sup>kg)</th>
+                                <th scope="col">Diameter<br>(kg)</th>
+                                <th scope="col">Density<br>(kg/m<sup>3</sup>)</th>
+                                <th scope="col">Gravity<br>(m/s<sup>2</sup>)</th>
+                                <th scope="col">Length of day<br>(hours)</th>
+                                <th scope="col">Distance from sun<br>(10<sup>2</sup>km)</th>
+                                <th scope="col">Mean temperature<br>(&#176c)</th>
+                                <th scope="col">Number of moons</th>
+                                <th scope="col">Notes</th>
+                                <th scope="col">Image</th>
                             </tr>
+                        </thead> 
+                            <tbody>
                             <tr>
-                                <th colspan="2">Terestrial planets</th>
-                                <th>Mercury</th>
+                                <th colspan="2" rowspan="4" scope="rowgroup">Terestrial planets</th>
+                                <th scope="row">Mercury</th>
                                 <td>0.330</td>
                                 <td>4.979</td>
                                 <td>5427</td>
@@ -62,8 +62,8 @@
                                 <td><img src="images/mercury.jpg" alt="Mercury"></td>
                             </tr>
                             <tr>
-                                <th colspan="2"></th>
-                                <th>Venus</th>
+                                
+                                <th scope="row">Venus</th>
                                 <td>4.89</td>
                                 <td>12.104</td>
                                 <td>5243</td>
@@ -76,8 +76,7 @@
                                 <td><img src="images/venus.jpg" alt="Venus"></td>
                             </tr>
                             <tr>                                
-                                <th colspan="2"></th>
-                                <th>Earth</th>
+                                <th scope="row">Earth</th>
                                 <td>5.97</td>
                                 <td>12.756</td>
                                 <td>5514</td>
@@ -90,8 +89,7 @@
                                 <td><img src="images/earth.png" alt="Earth"></td>
                             </tr>
                             <tr>                                
-                                <th colspan="2"></th>
-                                <th>Mars</th>
+                                <th scope="row">Mars</th>
                                 <td>0.642</td>
                                 <td>6.792</td>
                                 <td>3933</td>
@@ -104,8 +102,9 @@
                                 <td><img src="images/mars.jpg" alt="Mars"></td>
                             </tr>
                             <tr>                               
-                                <th colspan="2"></th>
-                                <th>Jupiter</th>
+                                <th rowspan="4" scope="rowgroup">Jovian planets</th>
+                                <th rowspan="2" scope="rowgroup">Gas planets</th>
+                                <th scope="row">Jupiter</th>
                                 <td>1090</td>
                                 <td>142.984</td>
                                 <td>1326</td>
@@ -118,8 +117,8 @@
                                 <td><img src="images/jupiter.jpg" alt="Jupiter"></td>
                             </tr>
                             <tr>                                
-                                <th colspan="2"></th>
-                                <th>Saturn</th>
+                                
+                                <th scope="row">Saturn</th>
                                 <td>568</td>
                                 <td>120.536</td>
                                 <td>687</td>
@@ -132,7 +131,7 @@
                                 <td><img src="images/saturn.jpg" alt="Saturn"></td>
                             </tr>
                             <tr>                                
-                                <th colspan="2"></th>
+                                <th rowspan="2" scope="rowgroup">Ice planets</th>
                                 <th>Uranus</th>
                                 <td>86.8</td>
                                 <td>51.118</td>
@@ -146,8 +145,8 @@
                                 <td><img src="images/uranus.jpg" alt="Uranus"></td>
                             </tr>
                             <tr>                                
-                                <th colspan="2"></th>
-                                <th>Neptune</th>
+                                
+                                <th scope="row">Neptune</th>
                                 <td>102</td>
                                 <td>49.526</td>
                                 <td>1638</td>
@@ -160,8 +159,8 @@
                                 <td><img src="images/neptune.jpg" alt="Neptune"></td>
                             </tr>
                             <tr>                                
-                                <th colspan="2">Dwarf Planets</th>
-                                <th>Pluto</th>
+                                <th colspan="2" scope="rowgroup">Dwarf Planets</th>
+                                <th scope="row">Pluto</th>
                                 <td>0.0146</td>
                                 <td>2.370</td>
                                 <td>2095</td>
@@ -173,22 +172,7 @@
                                 <td>Declassified as a planet in 2006 but this <a href="remains contreversial">remains contreversial</a></td>
                                 <td><img src="images/pluto.jpg" alt="Pluto"></td>
                             </tr>
-                        </thead>           
-                        <tbody>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                        </tbody>
-                <!-- The second child of the table element should be the colgroup element, which also contains several col elements, and helps define the purpose of the table colums. -->
-                    
-                <!-- The table head element should be the third child of the table element; it will wrap the code and content to define a row of column headers. -->    
-                
-                <!-- The fourth child of the table element should be the table body element, which will contain the code and content to display rows of data. -->
+                            </tbody>
                     
              </table>
         </main>
