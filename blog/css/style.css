@@ -1,0 +1,292 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+
+
+@font-face{
+    font-family:montserrat;
+    src: url(../fonts/sans-serif/montserrat-regular.ttf); ('truetype');
+
+}
+@font-face{
+    font-family:lato;
+    src: url(../fonts/sans-serif/lato-regularr.ttf); ('truetype');
+  
+}
+@font-face{
+    font-family:opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf); ('truetype');
+
+}
+@font-face{
+    
+    font-family:roboto;
+    src: url(../fonts/sans-serif/roboto-regular.ttf); ('truetype');
+
+}
+
+/*--------------------------------------------------------------------------*/
+
+@font-face{
+    font-family:josefinslab;
+    src: url(../fonts/serif/josefinslab-regular.ttf) format=('truetype');
+   
+}
+@font-face{
+    font-family:robotoslab;
+    src: url(../fonts/serif/robotoslab-regular.ttf) format=('truetype');
+   
+}
+@font-face{
+    font-family:rozhaone;
+    src: url(../fonts/serif/rozhaone-regular.ttf) format=('truetype');
+ 
+}
+@font-face{
+    font-family:ultra;
+    src: url(../fonts/serif/ultra-regular.ttf) format=('truetype');
+
+}
+
+html{
+    font-family: 'roboto', sans-serif;     
+    }
+
+h1{
+    font-family: 'opensans', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: .125rem .125rem;
+    margin: 1.125rem;
+    letter-spacing: .125rem;
+    transform: rotate(-5deg);
+}
+
+h1 span{
+    background-color:#83334c;
+    text-shadow: none;
+    font-size: 3rem; 
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family:fantasy;
+    letter-spacing: .75rem;
+    color: #edeede;
+    border-bottom-right-radius: .625rem;
+    border-top-left-radius: .625rem;
+    box-shadow: .125rem .125rem #000;
+    padding: .5rem .5rem;
+       
+}
+
+nav a:nth-child(2){
+    
+    text-decoration: line-through;
+    transform: rotate(2deg);
+    text-transform: uppercase;
+    color: #000;
+
+}
+nav a{
+    
+    float: left;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    line-height: 3;
+    text-align: center;
+    color: #374869;
+    font-size: 2.25rem;
+    display:block;
+    border-width: .0625rem;
+    border-color:#aeb7ba;
+    
+}
+nav{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 4rem;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.main-section {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.5rem;
+    
+}
+
+.subsection {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 2.5rem;
+    grid-column-gap: .5rem;
+    
+}
+
+.subsection figure{
+    
+    width: 20rem;
+    width: 100%;
+    margin: 0;
+    
+}
+.article-image{
+    float: left;
+    background-color: white;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    width:22rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+}
+aside{
+    
+    border-left: .125rem solid #000;
+    padding-left: 1.5rem;
+
+}
+
+aside p{
+    font-size: .75rem;
+}
+
+aside p span{
+    
+  font-size: .25rem;  
+}
+
+aside h3:nth-child(1){    
+        margin-block-start: 0;
+}
+
+img{
+    width: 100%;
+}
+article p{   
+    
+   margin-block-start: 0;
+   font-size: 1rem; 
+   line-height: 1.5rem;
+}
+
+figcaption{
+    
+    padding: .75rem .75rem;
+    
+}
+figure{
+
+    background-color: #edeedc;
+}
+
+a {
+     text-decoration: none;
+     color: #aeb7ba;
+}
+
+a:link,
+a:visited {
+    color: blue;
+}
+
+a:focus,
+a:hover {
+   
+  text-decoration: none;
+  color:#000;
+}
+
+
+h2{
+    padding-left: 2.25rem;
+    font-size: 1.5rem;
+    }
+
+h3{
+    
+    font-size: 1rem;
+    
+}
+
+button{
+    color: #edeede;
+    background-color: #33658A;
+    border-radius: .25rem;
+    font-size: 2rem;
+    padding: .6rem .6rem;
+    margin: 2rem; 
+    box-shadow: .125rem .125rem #000;
+}
+
+button:link,
+button:hover{
+    background-color: white;
+    color:red;
+}
+
+.copyright{
+    display: inline;
+    text-align: left;}
+
+.notation{
+    display: inline;
+    margin:0;
+    float: right;
+    text-align: right;   
+    width: 38%;
+}
+
+
