@@ -237,11 +237,6 @@ a {
      color: #aeb7ba;
 }
 
-a:link,
-a:visited {
-    color: blue;
-}
-
 a:focus,
 a:hover {
    
